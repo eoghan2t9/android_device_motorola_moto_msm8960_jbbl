@@ -40,6 +40,8 @@ TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_msm
 TARGET_LIBINIT_DEFINES_FILE := device/motorola/moto_msm8960_jbbl/init/init_moto_msm8960.c
 
+TARGET_USES_WCNSS_CTRL := true
+
 # Inline kernel building
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8960-common
 TARGET_KERNEL_CONFIG := msm8960_mmi_defconfig
@@ -52,7 +54,6 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12884901888
 
 # QCOM BSP
 TARGET_USES_QCOM_BSP := true
-COMMON_GLOBAL_CFLAGS += -DQCOM_BSP
 
 # Telephony
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril/MotorolaQualcommRIL.java
@@ -74,7 +75,6 @@ COMMON_GLOBAL_CFLAGS += -DMR0_CAMERA_BLOB -DQCOM_BSP_CAMERA_ABI_HACK -DNEEDS_VEC
 BOARD_HAVE_NEW_QC_GPS := true
 
 # Graphics
-TARGET_QCOM_DISPLAY_VARIANT := caf
 BOARD_EGL_CFG := $(LOCAL_PATH)/config/egl.cfg
 
 # Custom relese tools for unified devices
@@ -88,7 +88,7 @@ TARGET_RECOVERY_NO_MSM_BSP := true
 BOARD_CUSTOM_GRAPHICS := ../../../$(LOCAL_PATH)/graphics.c
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
-BOARD_RECOVERY_SWIPE := true
+TARGET_USERIMAGES_USE_EXT4 := true
 
 # TWRP
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
