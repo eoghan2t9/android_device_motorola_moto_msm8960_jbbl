@@ -50,7 +50,7 @@ BOARD_KERNEL_CMDLINE := console=/dev/null androidboot.hardware=qcom user_debug=3
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 12884901888
+#BOARD_USERDATAIMAGE_PARTITION_SIZE := 12884901888
 
 # QCOM BSP
 TARGET_USES_QCOM_BSP := true
@@ -89,6 +89,8 @@ BOARD_CUSTOM_GRAPHICS := ../../../$(LOCAL_PATH)/graphics.c
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_RECOVERY_FSTYPE_MOUNT_OPTIONS := ext4=max_batch_time=0,commit=1,data=ordered,barrier=1,errors=panic,nodelalloc|f2fs=errors=recover
+ 
 
 # TWRP
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
