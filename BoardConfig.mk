@@ -42,6 +42,8 @@ TARGET_LIBINIT_DEFINES_FILE := device/motorola/moto_msm8960_jbbl/init/init_moto_
 
 TARGET_USES_WCNSS_CTRL := true
 
+BOARD_USES_LEGACY_MMAP := true
+
 # Inline kernel building
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8960-common
 TARGET_KERNEL_CONFIG := msm8960_mmi_defconfig
