@@ -81,6 +81,9 @@ BOARD_HAVE_NEW_QC_GPS := true
 # Graphics
 BOARD_EGL_CFG := $(LOCAL_PATH)/config/egl.cfg
 
+# Media
+TARGET_NO_ADAPTIVE_PLAYBACK := true
+
 # Custom relese tools for unified devices
 TARGET_RELEASETOOLS_EXTENSIONS := device/motorola/moto_msm8960_jbbl
 
