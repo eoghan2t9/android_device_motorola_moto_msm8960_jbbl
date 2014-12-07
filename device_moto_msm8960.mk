@@ -116,7 +116,7 @@ PRODUCT_COPY_FILES += \
 
 # Media codecs
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/media_codecs.xml:system/etc/media_codecs.xml
+    $(LOCAL_PATH)/config/media_codecs_aosp.xml:system/etc/media_codecs.xml
 
 # XT90x recovery
 PRODUCT_COPY_FILES += \
@@ -127,9 +127,21 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/cm/prebuilt/common/bootanimation/540.zip:system/media/540.zip
 
-# Alternate optional key maps
-PRODUCT_PACKAGES += \
-    AsantiKeypad
+# QCOM Display
+PRODUCT_PROPERTY_OVERRIDES += \
+    hw.trueMirrorSupported=1
+
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
+    media.stagefright.enable-player=true \
+    media.stagefright.enable-http=true \
+    media.stagefright.enable-aac=true \
+    media.stagefright.enable-qcp=true \
+    media.stagefright.enable-fma2dp=true \
+    media.stagefright.enable-scan=true \
+    mmp.enable.3g2=true \
+    media.aac_51_output_enabled=true \
+    ro.mot.vr_source_dsp=1
 
 # Misc
 PRODUCT_PROPERTY_OVERRIDES += \
