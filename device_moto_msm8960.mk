@@ -142,21 +142,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	telephony.lteOnCdmaDevice=1 \
 	persist.radio.dfr_mode_set=1 \
 	persist.radio.eons.enabled= true \
-	ro.telephony.default_network=4 \
+	ro.telephony.default_network=10 \
 	persist.radio.mode_pref_nv10=1 \
 	persist.radio.no_wait_for_card=1 \
 	persist.radio.call_type=1 \
 	persist.radio.apm_sim_not_pwdn=1 \
-	persist.timed.enable=true \
-	ro.cdma.home.operator.numeric=46003 \
-	ro.cdma.home.operator.alpha=中国电信 \
-	cdma.operator.numeric=46003 \
-	gsm.sim.operator.numeric=46003 \
-	gsm.apn.sim.operator.numeric=46003 \
-	apn.sim.operator.numeric=46003 \
-	ro.cdma.subscribe_on_ruim_ready=true \
-	ro.cdma.subscription=1 \
-	ro.telephony.default_cdma_sub=0
+	persist.timed.enable=true
 
 # Radio and Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
