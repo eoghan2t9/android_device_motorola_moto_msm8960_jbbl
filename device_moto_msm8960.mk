@@ -81,12 +81,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/lib/hw/gps.msm8960.so:system/lib/hw/gps.msm8960.so
     
 # Disable captive portal detection
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/99disable-cpd:system/etc/init.d/99disable-cpd
+# PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/config/99disable-cpd:system/etc/init.d/99disable-cpd
 
 # Location secuity configuration file
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/sec_config:system/etc/sec_config
+# PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/config/sec_config:system/etc/sec_config
 
 # Wifi
 PRODUCT_COPY_FILES += \
