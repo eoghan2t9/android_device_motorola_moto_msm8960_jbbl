@@ -63,11 +63,9 @@ PRODUCT_PACKAGES += \
 # Symlinks
 PRODUCT_PACKAGES += \
     mbhc.bin \
-    wcd9310_anc.bin
-
-# GPS configuration
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf
+    wcd9310_anc.bin \
+    WCNSS_qcom_wlan_nv_calibration.bin \
+    WCNSS_qcom_wlan_nv_regulatory.bin
 
 # EGL config
 PRODUCT_COPY_FILES += \
