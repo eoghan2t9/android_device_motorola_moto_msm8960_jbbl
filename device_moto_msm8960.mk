@@ -71,6 +71,22 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/egl.cfg:system/lib/egl/egl.cfg
 
+# GPS
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf \
+    $(LOCAL_PATH)/gps/lib/libgps.utils.so:system/lib/libgps.utils.so \
+    $(LOCAL_PATH)/gps/lib/libloc_adapter.so:system/lib/libloc_adapter.so \
+    $(LOCAL_PATH)/gps/lib/libloc_eng.so:system/lib/libloc_eng.so \
+    $(LOCAL_PATH)/gps/lib/hw/gps.msm8960.so:system/lib/hw/gps.msm8960.so
+    
+# Disable captive portal detection
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/config/99disable-cpd:system/etc/init.d/99disable-cpd
+
+# Location secuity configuration file
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/config/sec_config:system/etc/sec_config
+
 # Wifi
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wlan/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
