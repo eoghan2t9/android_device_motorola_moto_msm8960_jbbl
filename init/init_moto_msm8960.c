@@ -146,6 +146,25 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.cdma.home.operator.alpha", "U.S. Cellular");
         property_set("ro.cdma.home.operator.numeric", "311220");
         property_set("gsm.sim.operator.numeric", "311580");
+    } else if (ISMATCH(carrier, "USC")) {
+        property_set("ro.cdma.nbpcd", "1");
+        property_set("ro.cdma.data_retry_config", "max_retries=infinite,0,0,10000,10000,100000,10000,10000,10000,10000,140000,540000,960000");
+        property_set("ro.cdma.international.eri", "2,74,124,125,126,157,158,159,193,194,195,196,197,198,228,229,230,231,232,233,234,235");
+        property_set("ro.cdma.home.operator.isnan", "1");
+        property_set("persist.radio.vrte_logic", "2");
+        property_set("ro.cdma.subscription", "1");
+        property_set("ro.config.svdo", "true");
+        property_set("persist.radio.skip_data_check", "1");
+        property_set("ro.mot.ignore_csim_appid", "true");
+        property_set("ro.cdma.ecmexittimer", "600000");
+        property_set("DEVICE_PROVISIONED", "1");
+        property_set("persist.radio.0x9e_not_callname", "1");
+        property_set("ro.cdma.home.operator.alpha", "中国电信");
+        property_set("ro.cdma.home.operator.numeric", "46003");
+        property_set("gsm.sim.operator.numeric", "46003");
+		property_set("ro.telephony.default_network", "4");
+		property_set("ro.cdma.subscribe_on_ruim_ready", "true");
+		property_set("ro.telephony.default_cdma_sub", "0");
     } else if (ISMATCH(modelno, "XT897")) {
         /* xt897 CSpire */
         property_set("ro.product.device", "asanti_c");
