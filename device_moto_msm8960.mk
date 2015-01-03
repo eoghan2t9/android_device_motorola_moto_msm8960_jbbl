@@ -88,14 +88,14 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     init.qcom.sh
 
-BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
-$(warning "USING F2FS for userdata")
+#BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
+#$(warning "USING F2FS for userdata")
 
 # This ensures the needed build tools are available.
 # TODO: make non-linux builds happy with external/f2fs-tool; system/extras/f2fs_utils
-ifeq ($(HOST_OS),linux)
-TARGET_USERIMAGES_USE_F2FS := true
-endif
+#ifeq ($(HOST_OS),linux)
+#TARGET_USERIMAGES_USE_F2FS := true
+#endif
 
 # TWRP
 PRODUCT_COPY_FILES += \
