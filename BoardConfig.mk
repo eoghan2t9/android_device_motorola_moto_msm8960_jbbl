@@ -107,3 +107,5 @@ TARGET_USERIMAGES_USE_EXT4 := true
 # Needs to be changed for M
 DEVICE_RESOLUTION := 720x1280
 #DEVICE_RESOLUTION := 540x960
+# SELinux
+-include device/qcom/sepolicy/sepolicy.mk
